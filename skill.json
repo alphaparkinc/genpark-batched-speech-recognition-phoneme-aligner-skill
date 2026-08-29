@@ -1,0 +1,38 @@
+{
+  "name": "genpark-batched-speech-recognition-phoneme-aligner-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Batched speech recognition engine with CTranslate2 inference acceleration and word-level phoneme alignment.",
+  "author": "genpark",
+  "category": "speech-recognition",
+  "tags": [
+    "whisperx",
+    "faster-whisper",
+    "ctranslate2",
+    "phoneme-alignment",
+    "batched-asr"
+  ],
+  "inputs": {
+    "audio_file_url": {
+      "type": "string"
+    },
+    "compute_vad": {
+      "type": "boolean"
+    }
+  },
+  "outputs": {
+    "transcription_job_id": {
+      "type": "string"
+    },
+    "ctranslate2_speedup_factor": {
+      "type": "number"
+    },
+    "word_timestamps_aligned_count": {
+      "type": "integer"
+    },
+    "transcript_json_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
